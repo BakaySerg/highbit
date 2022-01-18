@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'LexendDeca';
+	src: local('Lexend Deca bold'),
+	local('lexenddeca-bold-bold'),
+	url('../fonts/lexenddeca-bold.woff2') format('woff2'),
+	url('../fonts/lexenddeca-bold.woff') format('woff');
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'MyriadPro';
+	src: local('MyriadPro regular'),
+	local('myriadpro-regular'),
+	url('../fonts/myriadpro-regular.woff2') format('woff2'),
+	url('../fonts/myriadpro-regular.woff') format('woff');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'MyriadPro';
+	src: local('MyriadPro bold'),
+	local('myriadpro-bold'),
+	url('../fonts/myriadpro-bold.woff') format('woff2'),
+	url('../fonts/myriadpro-bold.woff') format('woff');
+	font-weight: 700;
+}

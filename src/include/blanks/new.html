@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>- | Crafthost</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<header class="header">
+			@@include('./include/header.html')
+		</header>
+		<div class="subheader">
+			<div class="container-lg">
+				<div class="subheader__title">-</div>
+				<nav class="subheader__menu">
+					<a href="#"></a>
+					<a href="#"></a>
+				</nav>
+			</div>
+		</div>
+		<!-- s-intro -->
+		<section class="s-intro">
+			<div class="container-lg md-flex md-order-reverse">
+				<figure class="intro__picture">
+					<img srcset="img/testimonials/intro.png, img/testimonials/intro-2x.png 2x" src="img/testimonials/intro.png" alt="user">
+				</figure>
+				<div class="intro__main intro__main--wide" role="main">
+					<h1 class="intro__title intro__title--lg">What Crafthost Customers&nbsp;Are&nbsp;Saying</h1>
+					<div class="intro__text intro__text--lg">
+						<h2 class="intro__headline">Our Customers Love Us</h2>
+						<p>Choosing a hosting company is never easy. With so many to choose from it's hard to know who to trust. We think you should choose Crafthost, you'll be in good company. At Crafthost we encourage our customers to rate our service and share their true opinion. This page compiles a large number of unedited, real reviews by Crafthost customers that we have collected over all the years we have been in&nbsp;service</p>
+					</div>
+					<div class="intro__cta">
+						<a href="#" class="btn btn--lg btn--icon btn--success">
+							Learn more
+							<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- banner -->
+		<div class="container-lg start">
+			<div class="start__title-box">
+				<strong class="start__title start__title--lg">What Are You <span class="color-alert">Waiting&nbsp;For?</span></strong>
+				<p>Join Our Customers & Create Your Website Today!</p>
+			</div>
+			<div class="start__cta">
+				<a href="hosting-dedicated.html" class="btn btn--lg btn--icon btn--success">Get started
+					<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow" /></svg>
+				</a>
+			</div>
+			<div class="start__picture">
+				<img loading="lazy" srcset="img/hosting/enterprise/banner.png, img/hosting/enterprise/banner-2x.png 2x" src="img/hosting/enterprise/banner.png" alt="start">
+			</div>
+		</div>
+
+	</div>
+	@@include('./include/footer.html')
+
+	<!-- popup (feedback)-->
+	<div class="drawer drawer--add" id="feedback-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__add">
+			<div class="drawer__fieldset">
+				@@include('./include/popups/modal-feedback.html')
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
+</body>
+</html>

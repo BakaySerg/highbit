@@ -1,0 +1,43 @@
+//fonts
+$default-font: 'MyriadPro',arial, sans-serif;
+$title-font: 'LexendDeca','MyriadPro',arial, sans-serif;
+
+//text
+$text:#2C374D;
+// $base-text: rgba(#2C374D,0.7);
+$muted-text: #6B7382;
+
+// bg
+$white: #fff;
+$bg: #F5F5FB;
+$bg2: #C0C3CA;
+// $border: #f5f5fb;
+$dark: #323E54;
+
+//accents
+$orange: #FF7244;
+$indigo: #035299;
+$blue: #0076DF;
+
+//px -> em
+@use "sass:math";
+$browser-context: 18;
+
+@function em($pixels, $context: $browser-context) {
+	@return math.div($pixels,$context) * 1em;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
