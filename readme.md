@@ -1,4 +1,4 @@
-# Geek panel (site)
+# Highbit-landing (site)
 
 ## Project setup
 ```
