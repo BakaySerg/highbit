@@ -1,6 +1,6 @@
 //fonts
-$default-font: 'MyriadPro',arial, sans-serif;
-$title-font: 'LexendDeca','MyriadPro',arial, sans-serif;
+$default-font: 'Rubik',arial, sans-serif;
+$title-font: 'Poppins',arial, sans-serif;
 
 //text
 $text:#141517;
@@ -17,11 +17,10 @@ $border: #f5f5fb;
 //accents
 $red: #FF4D40;
 $gray: #DADBDB;
-$blue: #0076DF;
 
 //px -> em
 @use "sass:math";
-$browser-context: 18;
+$browser-context: 16;
 
 @function em($pixels, $context: $browser-context) {
 	@return math.div($pixels,$context) * 1em;

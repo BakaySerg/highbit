@@ -5,10 +5,10 @@
 
 body {
 	position: relative;
-	color: $muted-text;
+	color: $text;
 	font-family: $default-font;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.875;
 	background: transparent;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -26,24 +26,16 @@ body {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
 	width: 100%;
-	max-width: 1122px;
+	max-width: 1150px;
 	&-lg {
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
 		max-width: 1400px;
-		padding-left: 16px;
-		padding-right: 16px;
 	}
 	@media (max-width: 359px) {
-		&,
-		&-lg {
-			padding-left: 14px;
-			padding-right: 14px;
-		}
+		padding-left: 14px;
+		padding-right: 14px;
 	}
 }
 
@@ -55,5 +47,5 @@ body {
 @import "layout/footer";
 
 //modules
-// @import "modules/intro";
+@import "modules/intro";
 

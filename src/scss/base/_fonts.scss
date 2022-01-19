@@ -1,24 +1,41 @@
 @font-face {
-	font-family: 'LexendDeca';
-	src: local('Lexend Deca bold'),
-	local('lexenddeca-bold-bold'),
-	url('../fonts/lexenddeca-bold.woff2') format('woff2'),
-	url('../fonts/lexenddeca-bold.woff') format('woff');
-	font-weight: 700;
-}
-@font-face {
-	font-family: 'MyriadPro';
-	src: local('MyriadPro regular'),
-	local('myriadpro-regular'),
-	url('../fonts/myriadpro-regular.woff2') format('woff2'),
-	url('../fonts/myriadpro-regular.woff') format('woff');
+	font-family: 'Rubik';
+	src: local('Rubik regular'),
+	local('rubik-regular'),
+	url('../fonts/rubik-regular.woff2') format('woff2'),
+	url('../fonts/rubik-regular.woff') format('woff');
 	font-weight: 400;
 }
 @font-face {
-	font-family: 'MyriadPro';
-	src: local('MyriadPro bold'),
-	local('myriadpro-bold'),
-	url('../fonts/myriadpro-bold.woff') format('woff2'),
-	url('../fonts/myriadpro-bold.woff') format('woff');
+	font-family: 'Rubik';
+	src: local('Rubik medium'),
+	local('rubik-medium'),
+	url('../fonts/rubik-medium.woff2') format('woff2'),
+	url('../fonts/rubik-medium.woff') format('woff');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Rubik';
+	src: local('Rubik bold'),
+	local('rubik-bold'),
+	url('../fonts/rubik-bold.woff2') format('woff2'),
+	url('../fonts/rubik-bold.woff') format('woff');
 	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: local('Poppins regular'),
+	local('poppins-regular'),
+	url('../fonts/poppins-regular.woff2') format('woff2'),
+	url('../fonts/poppins-regular.woff') format('woff');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: local('Poppins extra-bold'),
+	local('poppins extra-bold'),
+	url('../fonts/poppins-extrabold.woff') format('woff2'),
+	url('../fonts/poppins-extrabold.woff') format('woff');
+	font-weight: 800;
 }
