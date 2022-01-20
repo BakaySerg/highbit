@@ -1,0 +1,79 @@
+.btn {
+	display: inline-block;
+	color: currentColor;
+	border: none;
+	font-size: 1em;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	outline-color: transparent;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transition: background-color .3s, color .3s, border-color .3s, opacity .3s, box-shadow .3s;
+	cursor: pointer;
+	user-select: none;
+	font-family: inherit;
+	&>* {
+		pointer-events: none;
+	}
+	&--lg {
+		min-width: 230px;
+		padding-top: .88em;
+		padding-bottom: .88em;
+		border: 1px solid $color-accent;
+		&:hover {
+			background-color: $color-accent;
+		}
+		@media (max-width: 991px){
+			min-width: 190px;
+		}
+	}
+	&--circle {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $bg-middle;
+		color: $color-accent;
+		& > .icon {
+			width: 10px;
+			height: 10px;
+			&--down {
+				transform: rotate(90deg);
+			}
+		}
+		&:hover {
+			background-color: $color-accent;
+			color: #fff;
+		}
+		@media (max-width: 991px){
+			width: 50px;
+			height: 50px;
+		}
+		@media (max-width: 600px){
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&--icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.4em;
+		& > .icon {
+			width: 10px;
+			height: 10px;
+			margin-right: -8px;
+			position: relative;
+			transition: transform .3s;
+		}
+		&:hover {
+			.icon {
+				transform: translateX(3px);
+			}
+		}
+	}
+}
