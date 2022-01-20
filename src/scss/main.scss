@@ -13,7 +13,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	min-height: 100vh;
-	@media (max-width: 767px) {
+	@media (max-width: 1366px) {
 		font-size: 15px;
 	}
 }
@@ -39,13 +39,14 @@ body {
 	}
 }
 
-
-//components
-@import "components/buttons";
+@import "base/typography";
 // layout
 @import "layout/header";
 @import "layout/footer";
+//components
+@import "components/buttons";
 
 //modules
 @import "modules/intro";
+@import "modules/sections";
 

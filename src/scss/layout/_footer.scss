@@ -1,0 +1,70 @@
+.footer {
+	background-color: $bg-dark;
+	color: $gray;
+	padding-top: 3.3em;
+	padding-bottom: 3.4em;
+	font-size: em(14);
+	font-family: $title-font;
+	.logo {
+		margin-bottom: 2em;
+	}
+	.container {
+		@media (min-width: 768px){
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			gap: 2em;
+		}
+	}
+	&__com {
+		display: flex;
+		flex-direction: column;
+	}
+	&__copy {
+		margin-top: auto;
+	}
+	.soc {
+		display: flex;
+		align-items: flex-end;
+		gap: 0.5em;
+		a {
+			display: inline-block;
+			padding: 0.3em;
+			color: $gray;
+			&:hover {
+				color: #fff;
+			}
+		}
+		.icon {
+			width: 26px;
+			height: 26px;
+		}
+	}
+	&__title {
+		color: #fff;
+		font-size: 1.1em;
+		padding-bottom: 0.9em;
+		letter-spacing: .03em;
+	}
+	&__box {
+		flex-grow: .78;
+		display: flex;
+		align-content: flex-end;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1em;
+	}
+	&__nav {
+		align-self: flex-end;
+		min-width: 11%;
+		a {
+			color: inherit;
+			display: block;
+			padding-top: .2em;
+			padding-bottom: .2em;
+			&:hover {
+				color: $color-accent;
+			}
+		}
+	}
+}

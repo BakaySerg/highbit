@@ -1,15 +1,17 @@
 .intro {
 	background-color: $bg-dark;
 	color: #fff;
-	min-height: 80vh;
 	&:not(.intro--home) {
 		background-image: url(../img/general/intro.png);
 	}
 	&--home {
-		background-image: url(../img/home/texture-1.png);
-		background-repeat: no-repeat;
-		background-position: right 10%;
-		background-size: auto 117%;
+		@media (min-width: 1024px){
+			min-height: 96vh;
+			background-image: url(../img/home/texture-1.png);
+			background-repeat: no-repeat;
+			background-position: right 10%;
+			background-size: auto 117%;
+		}
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			background-image: url(../img/home/texture-1-2x.png);
 		}
@@ -50,6 +52,14 @@
 			align-items: center;
 			flex-direction: row-reverse;
 		}
+		@media (max-width: 1366px) and (max-height: 660px){
+			padding-top: 3em;
+			padding-bottom: 2em;
+		}
+		@media (max-width: 991px){
+			padding-top: 2.7em;
+			padding-bottom: 2.7em;
+		}
 	}
 }
 .intro {
@@ -57,11 +67,6 @@
 		padding-top: 5em;
 		position: relative;
 		max-width: 640px;
-		@media (min-width: 1024px){
-			flex-grow: 0.7;
-			align-self: stretch;
-			margin-right: auto;
-		}
 		&:before {
 			content: '';
 			position: absolute;
@@ -74,6 +79,21 @@
 		p {
 			color: $gray;
 			max-width: 400px;
+			@media (max-width: 1280px){
+				max-width: 380px;
+			}
+		}
+		@media (min-width: 1024px){
+			flex-grow: 0.7;
+			align-self: stretch;
+			margin-right: auto;
+		}
+		@media (max-width: 1280px){
+			padding-top: 3.6em;
+			max-width: 500px;
+			&:before {
+				max-width: 110px;
+			}
 		}
 	}
 	&__cta {
@@ -88,6 +108,9 @@
 		.color-accent {
 			font-weight: 800;
 		}
+		@media (max-width: 1280px){
+			font-size: 3.6em;
+		}
 	}
 	&__pict {
 		flex-shrink: 0;
@@ -101,6 +124,11 @@
 			transform: translate(-100%,100%);
 		}
 		@media (min-width: 1024px){
+			width: 78%;
+			margin-right: -18%;
+			margin-left: -25%;
+		}
+		@media (min-width: 1400px){
 			width: 96.697%;
 			margin-right: -36%;
 			margin-left: -22%;
