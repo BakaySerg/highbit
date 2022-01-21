@@ -126,6 +126,16 @@
 				max-height: 126px;
 			}
 		}
+		@media (max-width: 767px){
+			padding-top: 0;
+			padding-bottom: 2.6em;
+		}
+		@media (max-width: 500px){
+			img {
+				max-width: 110px;
+				max-height: 84px;
+			}
+		}
 	}
 	&__text {
 		@media (min-width: 768px){
@@ -144,6 +154,9 @@
 			display: flex;
 			align-items: center;
 			gap: 1.9em;
+			@media (max-width: 600px){
+				gap: 1em;
+			}
 		}
 	}
 }
