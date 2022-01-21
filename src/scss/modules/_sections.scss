@@ -5,9 +5,20 @@
 		padding-top: 3.4em;
 		padding-bottom: 3.7em;
 	}
+	@media (max-width: 600px){
+		padding-top: 2em;
+		padding-bottom: 2.5em;
+	}
 }
 .s--muted {
 	background-color: $bg-muted;
+}
+.s--dark {
+	background-color: $bg-dark;
+	color: $gray;
+	h2,h3,h4,h5 {
+		color: #fff;
+	}
 }
 .con {
 	&__row {
@@ -65,6 +76,74 @@
 			@media (max-width: 991px){
 				padding-bottom: 1.8em;
 			}
+		}
+	}
+}
+.s-cascade {
+	@media (min-width: 768px){
+		background-image: url(../img/home/bg-lines.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto 100%;
+	}
+}
+.cascade {
+	&__row {
+		padding-top: 1.6em;
+		padding-bottom: 2em;
+		@media (min-width: 768px){
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 2em;
+			&--reverse {
+				flex-direction: row-reverse;
+			}
+		}
+		@media (min-width: 1200px){
+			padding-bottom: 3em;
+			& + & {
+				padding-top: 3.3em;
+			}
+		}
+	}
+	&__pict {
+		flex-shrink: .02;
+		padding: 2em 5em;
+		@media (min-width: 992px){
+			flex-grow: 0.3;
+			text-align: center;
+		}
+		img {
+			margin: auto;
+			max-width: 250px;
+			object-fit: contain;
+		}
+		@media (max-width: 991px){
+			padding: 1em 2em;
+			img {
+				max-width: 142px;
+				max-height: 126px;
+			}
+		}
+	}
+	&__text {
+		@media (min-width: 768px){
+			max-width: 480px;
+		}
+		@media (min-width: 1200px){
+			max-width: 560px;
+		}
+		p {
+			padding-bottom: 2.2em;
+		}
+	}
+	&__cta {
+		a {
+			color: #fff;
+			display: flex;
+			align-items: center;
+			gap: 1.9em;
 		}
 	}
 }

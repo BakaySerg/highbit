@@ -2,8 +2,8 @@ if(window.matchMedia('(min-width: 1200px)').matches){
 	let canvas    = document.getElementById('canvas'),
 			ctx       = canvas.getContext('2d'),
 			perlin    = new ClassicalNoise(),
-			variation = .00137,
-			amp       = 1129,
+			variation = .00136,
+			amp       = 1029,
 			variators = [],
 			max_lines = (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) ? 25 : 40,
 			canvasWidth,
@@ -26,7 +26,7 @@ if(window.matchMedia('(min-width: 1200px)').matches){
 				ctx.lineTo(x, start_y + amp*y);
 			}
 			let color = Math.floor(162*Math.abs(y));
-			let alpha = Math.min(Math.abs(y)+0.06, .05);
+			let alpha = Math.min(Math.abs(y)+0.07, .0564);
 			ctx.strokeStyle = "rgba(255,255,255,"+alpha*2+")";
 			ctx.stroke();
 			ctx.closePath();
@@ -54,6 +54,6 @@ if(window.matchMedia('(min-width: 1200px)').matches){
 		canvas.setAttribute("width", canvasWidth);
 		canvas.setAttribute("height", canvasHeight);
 
-		start_y = canvasHeight/1.8;
+		start_y = canvasHeight/2;
 	}
 }

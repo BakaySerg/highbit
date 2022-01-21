@@ -33,6 +33,15 @@
 		}
 		@media (max-width: 600px){
 			min-width: 190px;
+			background-color: $color-accent;
+			&:hover {
+				background-color: lighten($color-accent,5%);
+			}
+		}
+		@media (max-width: 500px){
+			min-width: 180px;
+			padding-top: 0.6em;
+			padding-bottom: 0.6em;
 		}
 	}
 	&--accent {

@@ -19,14 +19,26 @@ function setActiveMenuItem() {
 };
 
 document.addEventListener('DOMContentLoaded', function(){
-		setActiveMenuItem();
-		//user menu
-		const menuTrigger = document.querySelector(".btn--menu");
+	setActiveMenuItem();
+	//user menu
+	const menuTrigger = document.querySelector(".btn--menu");
+	const subMenus = document.querySelectorAll(".sub-menu");
 
 	menuTrigger?.addEventListener("click", function() {
 		menuTrigger.classList.toggle("open");
 		menuTrigger.previousElementSibling.classList.toggle("menu--open");
+		[...subMenus].forEach(function(el){
+			el.classList.remove("open");
+		});
 	});
+
+	if (subMenus){
+		[...subMenus].forEach(function(el){
+			el.addEventListener("click",function(){
+				this.classList.toggle("open");
+			})
+		})
+	};
 
 
 	// copyright - year

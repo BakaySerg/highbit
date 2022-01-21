@@ -13,16 +13,17 @@
 			padding-bottom: .9em;
 		}
 		@media (max-width: 767px){
-			padding-top: .4em;
+			padding-top: .6em;
 			padding-bottom: .4em;
 			padding-left: 10px;
 			.logo {
-				max-width: 160px;
+				max-width: 118px;
+				padding-top: .3em;
 			}
 		}
 		@media (max-width: 380px){
 			.logo {
-				max-width: 142px;
+				max-width: 110px;
 			}
 		}
 	}
@@ -60,7 +61,7 @@
 				}
 			}
 		}
-		@media (max-width: 719px) {
+		@media (max-width: 1023px) {
 			padding: 0;
 			max-height: 0;
 			transition: all .3s cubic-bezier(.39,.58,.57,1);
@@ -70,7 +71,7 @@
 			top: 100%;
 			left: 0;
 			right: 0;
-			background-color: #fff;
+			background-color: $bg-dark;
 			&--open {
 				max-height: 120vh;
 				pointer-events: auto;
@@ -84,17 +85,43 @@
 				&>li {
 					width: 100%;
 					&:nth-child(odd) {
-						background-color: $bg;
+						background-color: $bg-middle;
 					}
 				}
 			}
 			&__item {
 				padding: 0 9px;
 			}
+			.sub-menu {
+				margin-right: 0;
+				padding: .4em 1em;
+				&> span {
+					display: inline-block;
+				}
+				&:after {
+					position: absolute;
+					right: 1em;
+					top: 1.1em;
+					transition: .3s;
+				}
+				&-dialog {
+					position: relative;
+					height: 0;
+					overflow: hidden;
+					opacity: 0;
+					visibility: hidden;
+					padding: 0;
+					.menu__link {
+						margin-bottom: .1em;
+					}
+				}
+			}
 			&__link {
 				display: block;
 				width: 100%;
 				padding: .4em 1em;
+				width: fit-content;
+				min-width: 50%;
 				&.active {
 					color: $color-accent;
 					font-weight: 700;
@@ -112,13 +139,84 @@
 		}
 	}
 }
+.sub-menu.open:after {
+	transform: scaleY(-1);
+}
+.sub-menu.open .sub-menu-dialog {
+	@media (max-width: 1023px) {
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+		padding: 0.4em 0 0;
+	}
+}
+.sub-menu {
+	position: relative;
+	margin-right: 0.4em;
+	user-select: none;
+	span {
+		transition: .2s;
+	}
+	@media (min-width: 1024px){
+		&:before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			border-bottom: 2px solid $color-accent;
+			transition: .3s;
+			opacity: 0;
+			visibility: hidden;
+			transform: scaleX(0);
+			transform-origin: left top;
+		}
+	}
+	&:after {
+		position: absolute;
+		opacity: .7;
+		right: -20px;
+		top: 42%;
+	}
+	@media (min-width: 1024px){
+		.sub-menu-dialog {
+			position: absolute;
+			background-color: $bg-dark;
+			top: calc(100% + 2px);
+			padding: 1em 2.6em;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			.menu__link {
+				display: block;
+				width: fit-content;
+				white-space: nowrap;
+				line-height: 1.2;
+			}
+		}
+		&:hover {
+			span {
+				color: $color-accent;
+			}
+			&:before {
+				transform: scaleX(1);
+				opacity: 1;
+				visibility: visible;
+			}
+			.sub-menu-dialog {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
+	}
+}
 .btn--menu {
 	position: relative;
 	padding: 5px;
 	margin-left: 1em;
-	width: 34px;
-	height: 34px;
-	@media (min-width: 720px){
+	width: 37px;
+	height: 37px;
+	@media (min-width: 1024px){
 		display: none !important;
 	}
 	.icon--menu {
