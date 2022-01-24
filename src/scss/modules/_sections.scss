@@ -352,6 +352,7 @@
 		padding-top: 2em;
 		@media (max-width: 991px){
 			flex-wrap: wrap;
+			gap: 3.1em;
 		}
 	}
 	&__item {
@@ -383,7 +384,7 @@
 		@media (max-width: 991px){
 			grid-template-columns: repeat(3,1fr);
 		}
-		@media (max-width: 768px){
+		@media (max-width: 600px){
 			grid-template-columns: repeat(2,1fr);
 		}
 	}
