@@ -4,7 +4,7 @@
 	font-family: $title-font;
 	font-weight: 800;
 	padding-bottom: .52em;
-	margin-bottom: 1.1em;
+	margin-bottom: 1.2em;
 	line-height: 1.22;
 	&:after {
 		content: '';
@@ -36,13 +36,39 @@
 	width: 10px;
 	height: 8px;
 }
-// market-list
-	// background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.10039 1.3999L4.00039 6.5999L0.900391 3.4999' stroke='%23FF4D40' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+.marked-list {
+	list-style-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.10039 1.3999L4.00039 6.5999L0.900391 3.4999' stroke='%23FF4D40' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	list-style-position: outside;
+	padding-left: 1em;
+	li {
+		padding-left: 0.7em;
+	}
+}
+.columns-list {
+	@media (min-width: 720px){
+		columns: 2;
+		column-gap: 1.1em;
+	}
+	li {break-inside: avoid;}
+}
 
 [class$="__text"] {
 	@media (max-width: 600px){
 		p,ul,ol {
 			font-size: 0.936em;
 		}
+	}
+}
+.h3 {
+	font-size: em(28);
+	line-height: 1.2;
+	padding-bottom: .7em;
+	font-family: $title-font;
+	font-weight: 800;
+	@media (max-width: 1100px){
+		font-size: 1.8em;
+	}
+	@media (max-width: 500px){
+		font-size: 1.4em;
 	}
 }
