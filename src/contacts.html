@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contacts | Highbit</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<div class="intro">
+			<canvas id="canvas"></canvas>
+			@@include('./include/header.html')
+			<!-- <div class="subheader">
+				<div class="container">
+					<nav class="subheader__menu">
+						<a href="#relationship">Partner Relationship</a>
+						<a href="#value">Partner Value</a>
+						<a href="#touch">Get in touch</a>
+					</nav>
+				</div>
+			</div> -->
+			<!-- s-intro -->
+			<section class="s-intro s-intro--other">
+				<div class="container square-decor">
+					<div class="intro__text">
+						<h1 class="intro__headline">Contacts</h1>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- -->
+		<section class="s--simply s--muted s-contact">
+			<div class="container">
+				<h2 class="title">Contacts</h2>
+				<div class="contact__row">
+					<div class="contact__item" data-double-text="01">
+						<h3 class="h3">Address</h3>
+						<address class="contact__inner">
+							1234 Road way <br>
+							Highbit, <br>
+							CR 12345-123456, USA
+						</address>
+					</div>
+					<div class="contact__item contact__item--accent" data-double-text="02">
+						<h3 class="h3">Phone</h3>
+						<div class="contact__inner">Tel / Fax: +1 234 567 8910</div>
+						<div class="contact__inner">Tel: +1 234 567 8910</div>
+					</div>
+					<div class="contact__item" data-double-text="03">
+						<h3 class="h3">Working Hours</h3>
+						<div class="contact__inner">
+							8:30 a.m. to 7:45 p.m. <br>
+							Monday - Friday
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- s-form -->
+		<section class="s-form s--gray">
+			<div class="container">
+				<h2 class="title">Get in Touch</h2>
+				<form action="#" class="form">
+					<div class="text-center">
+						<p><b>Do you have any questions?</b> Leave a request and our manager will contact you shortly!</p>
+					</div>
+					<div class="form__dual">
+						<input type="text" name="c-name" class="form__input" placeholder="Your Name" minlength="2" required>
+						<input type="email" name="c-email" class="form__input" placeholder="Your Email" minlength="2" required>
+					</div>
+					<div class="form__dual">
+						<input type="tel" name="c-phone" class="form__input" placeholder="Phone" minlength="8" inputmode="numeric" required>
+						<input type="text" name="c-company" class="form__input" placeholder="Your Company" minlength="2">
+					</div>
+					<textarea class="textarea" name="msg" cols="30" rows="10" placeholder="Tell use more" required></textarea>
+					<div class="form__cta">
+						<div class="catpcha"><img src="img/contacts/captcha.png" alt="captcha"></div>
+						<button type="submit" class="btn btn--lg btn--icon btn--accent">
+							Send Message
+							<svg class="icon" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+	</div><!-- /wrapper -->
+	@@include('./include/footer.html')
+	<script src="js/main.js"></script>
+	<script defer src="js/lwg.js"></script>
+	<script defer src="js/waves.js"></script>
+</body>
+</html>

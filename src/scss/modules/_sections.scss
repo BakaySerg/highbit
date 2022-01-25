@@ -6,12 +6,15 @@
 		padding-bottom: 3.7em;
 	}
 	@media (max-width: 600px){
-		padding-top: 2em;
+		padding-top: 2.2em;
 		padding-bottom: 2.5em;
 	}
 }
 .s--muted {
 	background-color: $bg-muted;
+}
+.s--gray {
+	background-color: $gray;
 }
 .s--dark {
 	background-color: $bg-dark;
@@ -50,6 +53,9 @@
 		z-index: 1;
 		@media (max-width: 991px){
 			flex-shrink: 0.3;
+		}
+		@media (max-width: 767px){
+			padding-bottom: 2em;
 		}
 		&:before {
 			content: '';
@@ -110,6 +116,15 @@
 		position: relative;
 		z-index: 2;
 		max-width: 560px;
+		.marked-list {
+			li {
+				line-height: 1.2;
+				padding-bottom: 1.5em;
+				@media (max-width: 500px){
+					padding-bottom: 1.2em;
+				}
+			}
+		}
 		p {
 			padding-bottom: 2.7em;
 			@media (max-width: 991px){
@@ -202,6 +217,13 @@
 .s-hov {
 	padding-top: 7.4em;
 	overflow: visible;
+	@media (max-width: 1100px){
+		padding-top: 4.5em;
+	}
+	@media (max-width: 767px){
+		padding-top: 2.5em;
+		padding-bottom: 2em;
+	}
 }
 [data-double-text]:before {
 	content: attr(data-double-text);
@@ -219,8 +241,17 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(290px,1fr));
 			justify-items: stretch;
-			grid-gap: 1.75em;
+			grid-gap: 1.1em;
 			margin-bottom: -4em;
+		}
+		@media (min-width: 992px){
+			grid-gap: 1.75em;
+		}
+		@media (max-width: 767px){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 14px;
 		}
 	}
 	&__bg {
@@ -241,12 +272,12 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 60%;
-		padding: 2em 1.1em;
+		height: 54%;
+		padding: 2.8em 1.6em;
 		color: #fff;
 		background-color: transparent;
 		transition: .4s;
-		transform: translateY(110%);
+		transform: translateY(121%);
 		p {
 			opacity: 0;
 			transition: .4s;
@@ -256,6 +287,11 @@
 		position: relative;
 		overflow: hidden;
 		@media (min-width: 768px){
+			&:nth-child(2) {
+				top: 4em;
+			}
+		}
+		@media (min-width: 1101px){
 			&:nth-child(2) {
 				top: 5em;
 			}
@@ -280,11 +316,40 @@
 				}
 			}
 		}
+		@media (max-width: 1100px){
+			& {
+				max-width: 355px;
+				.hov__bg {
+					margin-bottom: -36%;
+					&:after {
+						height: 100%;
+						top: 0;
+						background: linear-gradient(to bottom,rgba(1,1,1,.2),rgba(1,1,1,.8));
+					}
+				}
+				.hov__text {
+					top: auto;
+					bottom: 0;
+					transform: none;
+					height: auto;
+					padding: 2.5em 1.4em;
+					p {opacity: 1;}
+				}
+			}
+
+		}
 	}
 }
 .s-tech {
 	padding-top: 16em;
 	padding-bottom: 7em;
+	@media (max-width: 991px){
+		padding-top: 9em;
+	}
+	@media (max-width: 767px){
+		padding-top: 2.2em;
+		padding-bottom: 2.2em;
+	}
 }
 .tech {
 	&__row {
@@ -313,6 +378,12 @@
 				background-size: cover;
 			}
 		}
+		@media (max-width: 991px){
+			flex-shrink: 0.3;
+		}
+		@media (max-width: 767px){
+			padding-bottom: 2em;
+		}
 		&--p {
 			@media (min-width: 768px){
 				&:before {
@@ -321,17 +392,31 @@
 					left: -66%;
 				}
 			}
+			@media (max-width: 991px){
+				&:before {
+					top: -1%;
+					left: -44%;
+					width: 160%;
+					height: 120%;
+				}
+			}
 		}
 	}
 	&__text {
 		max-width: 560px;
 		p {
 			padding-bottom: 2.6em;
+			@media (max-width: 500px){
+				padding-bottom: 1.8em;
+			}
 		}
 		.marked-list {
 			li {
 				line-height: 1.2;
 				padding-bottom: 1.5em;
+				@media (max-width: 500px){
+					padding-bottom: 1.2em;
+				}
 			}
 			b {color: #fff;}
 		}
@@ -341,8 +426,12 @@
 	padding-top: 8em;
 	padding-bottom: 7em;
 	@media (max-width: 991px){
-		padding-top: 6em;
-		padding-bottom: 5em;
+		padding-top: 5em;
+		padding-bottom: 4em;
+	}
+	@media (max-width: 600px){
+		padding-top: 3em;
+		padding-bottom: 2em;
 	}
 }
 .red {
@@ -359,9 +448,19 @@
 		display: flex;
 		gap: 2.4em;
 		min-width: 48%;
+		@media (max-width: 600px){
+			gap: 1.8em;
+		}
 	}
 	&__icon {
 		flex-shrink: 0;
+		img {
+			object-fit: contain;
+		}
+		@media (max-width: 600px){
+			max-width: 60px;
+			max-height: 60px;
+		}
 	}
 	&__text {
 		p {
@@ -399,6 +498,12 @@
 			max-width: 140px;
 			max-height: 140px;
 			margin: auto;
+		}
+		@media (max-width: 500px){
+			img {
+				max-width: 122px;
+				max-height: 122px;
+			}
 		}
 	}
 }

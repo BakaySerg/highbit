@@ -83,6 +83,25 @@
 		}
 	}
 }
+.s-intro--other {
+	.container {
+		@media (min-width: 1200px){
+			min-height: 53vh;
+		}
+	}
+	.square-decor {
+		&:before {
+			max-width: 63px;
+			max-height: 63px;
+			bottom: 0;
+			right: 0;
+		}
+		&:after {
+			bottom: 63px;
+			right: 63px;
+		}
+	}
+}
 .intro {
 	&__text {
 		padding-top: 5em;

@@ -45,8 +45,10 @@ body {
 @import "layout/footer";
 //components
 @import "components/buttons";
+@import "components/forms";
 
 //modules
 @import "modules/intro";
 @import "modules/sections";
+@import "pages/contacts.scss";
 
