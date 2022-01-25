@@ -22,14 +22,16 @@
 		padding-top: .88em;
 		padding-bottom: .88em;
 		border: 1px solid $color-accent;
+		max-height: 60px;
+		min-height: 60px;
 		&:hover {
 			background-color: $color-accent;
 		}
-
 		@media (max-width: 1100px){
 			min-width: 220px;
 			padding-top: .8em;
 			padding-bottom: .8em;
+			min-height: 56px;
 		}
 		@media (max-width: 600px){
 			min-width: 190px;

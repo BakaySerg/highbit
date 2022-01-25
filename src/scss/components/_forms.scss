@@ -14,12 +14,19 @@
 	margin-left: auto;
 	margin-right: auto;
 	.text-center {
-		padding-bottom: 1.68em;
+		padding-bottom: 3.5em;
+		padding-top: 0.6em;
+		@media (max-width: 991px){
+			padding-top: 0;
+			padding-bottom: 2em;
+		}
 	}
 	&__dual {
-		display: flex;
-		align-items: center;
-		gap: 1.68em;
+		@media (min-width: 720px){
+			display: flex;
+			align-items: center;
+			gap: 1.68em;
+		}
 	}
 	.form__input {
 		width: 100%;
@@ -38,6 +45,9 @@
 		@media (max-width: 1200px){
 			height: 50px;
 		}
+		@media (max-width: 767px){
+			margin-bottom: 1em;
+		}
 	}
 	textarea {
 		width: 100%;
@@ -47,22 +57,29 @@
 		padding: 1em 1.2em .4em;
 		border: none;
 		background-color: $bg-muted;
-		height: 150px;
+		height: 128px;
 		resize: none;
 		outline: none;
 		margin-bottom: 1.68em;
 		&:focus {
 			background-color: lighten($bg-muted, 3%);
 		}
+		@media (max-width: 767px){
+			margin-bottom: 1em;
+		}
+	}
+	&__cta {
+		@media (min-width: 601px){
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			gap: 1.7em;
+		}
 	}
 }
-.form__captcha {
-	width: 100%;
-	display: flex;
-	margin-bottom: 30px;
+.captcha {
 	opacity: .8;
-	@media (min-width: 768px){
-		justify-content: flex-end;
-		margin-bottom: 2.8em;
+	@media (max-width: 600px){
+		margin-bottom: 1em;
 	}
 }

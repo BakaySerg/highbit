@@ -1,5 +1,5 @@
 .s-contact {
-	@media (min-width: 992px){
+	@media (min-width: 1200px){
 		&:before,&:after {
 			content: '';
 			position: absolute;
@@ -22,15 +22,23 @@
 }
 .contact {
 	&__row {
-		display: grid;
-		grid-template-columns: repeat(3,1fr);
-		padding-bottom: 4em;
+		@media (min-width: 720px){
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			padding-bottom: 4em;
+		}
 	}
 	&__inner {
 		position: relative;
 		font-style: normal;
 		padding-left: 1.8em;
 		padding-bottom: .7em;
+		@media (max-width: 991px){
+			padding-left: 1.6em;
+		}
+		@media (max-width: 500px){
+			padding-bottom: 0.3em;
+		}
 		&:before {
 			content: '';
 			position: absolute;
@@ -47,10 +55,23 @@
 		padding: 2.7em 1.8em 2.4em;
 		border: 1px solid $border2;
 		position: relative;
+		@media (max-width: 991px){
+			padding: 2.5em 1.2em 2.1em;
+		}
+		@media (max-width: 719px){
+			max-width: 92%;
+			&+& {
+				margin-top: 1.2em;
+			}
+		}
 		&:before {
 			position: absolute;
 			right: 1.5em;
 			top: 1.2em;
+			@media (max-width: 991px){
+				right: 1em;
+				top: 0.6em;
+			}
 		}
 		&--accent {
 			border-color: transparent;
@@ -64,10 +85,20 @@
 			}
 		}
 		&:nth-child(2) {
-			top: 4.6em;
+			@media (min-width: 720px){
+				top: 4.6em;
+			}
+			@media (max-width: 719px){
+				left: 4%;
+			}
 		}
 		&:nth-child(3) {
-			top: 1.8em;
+			@media (min-width: 720px){
+				top: 1.8em;
+			}
+			@media (max-width: 719px){
+				left: 8%;
+			}
 		}
 		.h3 {
 			padding-bottom: .9em;
@@ -75,6 +106,42 @@
 	}
 }
 .s-form {
-	padding-top: 7em;
-	padding-bottom: 6em;
+	padding-top: 5.7em;
+	padding-bottom: 7.4em;
+	@media (min-width: 1200px){
+		&:before {
+			content: '';
+			position: absolute;
+			width: 80vmin;
+			height: 80vmin;
+			left: -2%;
+			bottom: -5%;
+			background-image: url(../img/contacts/texture-waves.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+	&:after {
+		content: '';
+			position: absolute;
+			height: 100%;
+			width: 30vmin;
+			right: 13%;
+			top: 0;
+			background-image: url(../img/contacts/bg-lines.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+	}
+	@media (max-width: 1100px){
+		padding-top: 4.4em;
+		padding-bottom: 5.8em;
+	}
+	@media (max-width: 500px){
+		padding-top: 2.4em;
+		padding-bottom: 2.8em;
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
 }
