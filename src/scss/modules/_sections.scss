@@ -140,6 +140,13 @@
 		background-position: center;
 		background-size: auto 100%;
 	}
+	&--f {
+		@media (min-width: 768px){
+			background-image: url(../img/features/bg-lines-dark.svg);
+			background-size: auto;
+			background-position: 51% top;
+		}
+	}
 }
 .cascade {
 	&__row {
@@ -155,10 +162,13 @@
 			}
 		}
 		@media (min-width: 1200px){
-			padding-bottom: 3em;
+			padding-bottom: 2.6em;
 			& + & {
-				padding-top: 3.3em;
+				padding-top: 2.2em;
 			}
+		}
+		@media (max-width: 600px){
+			padding-bottom: 1em;
 		}
 	}
 	&__pict {
@@ -171,6 +181,7 @@
 		img {
 			margin: auto;
 			max-width: 250px;
+			max-height: 230px;
 			object-fit: contain;
 		}
 		@media (max-width: 991px){
@@ -185,9 +196,10 @@
 			padding-bottom: 2.6em;
 		}
 		@media (max-width: 500px){
+			padding-bottom: 1.4em;
 			img {
 				max-width: 110px;
-				max-height: 84px;
+				max-height: 98px;
 			}
 		}
 	}
@@ -200,6 +212,9 @@
 		}
 		p {
 			padding-bottom: 2.2em;
+			@media (max-width: 500px){
+				padding-bottom: 1em;
+			}
 		}
 	}
 	&__cta {
