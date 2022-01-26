@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Startup | Highbit</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<div class="intro">
+			<canvas id="canvas"></canvas>
+			@@include('./include/header.html')
+			<div class="subheader" id="subheader">
+				<div class="container">
+					<nav class="subheader__menu">
+						<a href="#startup">Startup</a>
+						<a href="#steps">Project Steps</a>
+						<a href="#sme">SME</a>
+						<a href="#small-com">Small Companies</a>
+					</nav>
+				</div>
+			</div>
+			<!-- s-intro -->
+			<section class="s-intro s-intro--other">
+				<div class="container square-decor">
+					<div class="intro__text">
+						<h1 class="intro__headline">Startup</h1>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<section class="s--simply s--muted" id="startup">
+			<div class="container tech__row">
+				<div class="tech__pict tech__pict--a">
+					<img loading="lazy" srcset="img/startup/startup.jpg, img/startup/startup-2x.jpg 2x" src="img/startup/startup.jpg" alt="platform" width="380" height="475">
+				</div>
+				<div class="tech__text">
+					<h2 class="title">Startup</h2>
+					<p>HIGHBIT is a software development company that helps businesses across the globe bring their products to life. Whether you're a startup founder or a startup accelerator consultant looking for a trusted technical partner, we're here for you.</p>
+					<p>Starting with the challenge you intend to solve, we work with you to analyze the problem and find solutions to best address it.</p>
+					<div class="accordion__text">
+						<div class="accordion__hidden">
+							<p>We prepare a roadmap of our further steps, then move to the product design stage. At this stage we deliver a user experience and user interface that meet your business goals and delight your users. Finally, we help you develop your product and launch it on the market.</p>
+							<p>We usually start with building an MVP, as this is the most robust approach to product development. However, if you need to build a prototype first, we'd be happy to help you.</p>
+							<button type="button" class="btn btn--combo">
+								<span>Show more</span>
+								<i class="btn btn--circle"><svg class="icon icon--down" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--  -->
+		<section class="s-steps s--gray" id="steps">
+			<div class="container">
+				<div class="text-center pb-2">
+					<h3 class="h3">Project Steps:</h3>
+				</div>
+				<div class="step__row">
+					<div class="step__item" data-double-text="01">
+						<div class="step__icon">
+							<img loading="lazy" src="img/startup/v-1.svg" alt="feature">
+						</div>
+						<h3 class="h3">Product <br>Design</h3>
+						<div class="step__text">
+							<ul class="marked-list">
+								<li>Business analysis</li>
+								<li>Requirements engineering</li>
+								<li>User experience design</li>
+							</ul>
+						</div>
+					</div>
+					<div class="step__item step__item--accent" data-double-text="02">
+						<div class="step__icon">
+							<img loading="lazy" src="img/startup/v-2.svg" alt="feature">
+						</div>
+						<h3 class="h3">Product Development</h3>
+						<div class="step__text">
+							<ul class="marked-list">
+								<li>User interface design</li>
+								<li>Backend development</li>
+								<li>Frontend development</li>
+								<li>Infrastructure management</li>
+							</ul>
+						</div>
+					</div>
+					<div class="step__item" data-double-text="03">
+						<div class="step__icon">
+							<img loading="lazy" src="img/startup/v-3.svg" alt="feature">
+						</div>
+						<h3 class="h3">Support &&nbsp;Maintenance</h3>
+						<div class="step__text">
+							<ul class="marked-list">
+								<li>Product updates</li>
+								<li>New feature development</li>
+								<li>Software maintenance</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--  -->
+		<section class="" id="sme">
+			<div class="container"></div>
+		</section>
+
+		<!--  -->
+		<section class="" id="small-com">
+			<div class="container"></div>
+		</section>
+
+
+	</div><!-- /wrapper -->
+	@@include('./include/footer.html')
+	<script src="js/main.js"></script>
+	<script defer src="js/lwg.js"></script>
+	<script defer src="js/waves.js"></script>
+</body>
+</html>

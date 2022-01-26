@@ -40,6 +40,27 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 	};
 
+	const stickyHeader = document.getElementById("subheader");
+	if (stickyHeader) {
+		const mainNavLinks = [...stickyHeader.querySelectorAll("a")].filter(item => !item.classList.contains("subheader__link"));
+		window.addEventListener('scroll', function(e) {
+			let winTop = window.scrollY;
+			winTop >= 90 ?
+			stickyHeader.classList.add("subheader--sticky") :
+			stickyHeader.classList.remove("subheader--sticky");
+
+			mainNavLinks?.forEach(link => {
+				let sec = document.querySelector(link.hash);
+					if (sec.offsetTop <= winTop + 5 && sec.offsetTop + sec.offsetHeight > winTop + 5) {
+						link.classList.add("current");
+					} else {
+						link.classList.remove("current");
+					}
+				});
+
+		});
+	};
+
 
 	// copyright - year
 	const year = document.getElementById("year");
