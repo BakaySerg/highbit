@@ -104,6 +104,9 @@
 		display: flex;
 		align-items: center;
 		gap: .7em;
+		span {
+			min-width: 84px;
+		}
 		.btn--circle {
 			background-color: $gray;
 		}

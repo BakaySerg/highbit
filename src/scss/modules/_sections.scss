@@ -1,6 +1,6 @@
 .s--simply {
-	padding-top: 5.8em;
-	padding-bottom: 5.3em;
+	padding-top: 6.2em;
+	padding-bottom: 5.7em;
 	@media (max-width: 1100px){
 		padding-top: 3.4em;
 		padding-bottom: 3.7em;
@@ -109,6 +109,18 @@
 					bottom: 20%;
 					left: 89%;
 				}
+			}
+		}
+		&--a {
+			&:after {
+				content: '';
+				position: absolute;
+				width: 78px;
+				height: 84px;
+				background-size: contain;
+				background-image: url(../img/general/logo-dark.svg);
+				top: 10%;
+				right: -40px;
 			}
 		}
 	}
@@ -377,14 +389,15 @@
 	}
 	&__pict {
 		flex-shrink: 0;
+		align-self: flex-start;
 		@media (min-width: 768px){
 			position: relative;
 			z-index: 1;
 			&:before {
 				content: '';
 				position: absolute;
-				width: 178%;
-				height: 154%;
+				width: 176%;
+				height: 152%;
 				background-image: url(../img/home/texture-3.png);
 				background-repeat: no-repeat;
 				z-index: -1;
@@ -416,7 +429,39 @@
 				}
 			}
 		}
-	}
+		&--a {
+			@media (min-width: 768px){
+				&:before {
+					background-image: url(../img/startup/texture-waves.png);
+					top: -31%;
+					left: -25%;
+				}
+			}
+			@media (max-width: 991px){
+				&:before {
+					width: 160%;
+					height: 120%;
+				}
+			}
+		}
+		&--b {
+			@media (min-width: 768px){
+				&:before {
+					width: 110%;
+					height: 110%;
+					background-image: url(../img/startup/waves.png);
+					top: -21%;
+					left: -32%;
+				}
+			}
+			@media (max-width: 991px){
+				&:before {
+					top: -15%;
+					left: -20%;
+				}
+			}
+		}
+ 	}
 	&__text {
 		max-width: 560px;
 		p {
@@ -453,7 +498,7 @@
 	&__row {
 		display: flex;
 		gap: 1.5em;
-		padding-top: 2em;
+		padding-top: 1.6em;
 		@media (max-width: 991px){
 			flex-wrap: wrap;
 			gap: 3.1em;
@@ -519,6 +564,29 @@
 				max-width: 122px;
 				max-height: 122px;
 			}
+		}
+	}
+}
+.container--net {
+	@media (min-width: 991px) and (max-width: 1930px){
+		&:before,&:after {
+			content: '';
+			position: absolute;
+			width: 26vmin;
+			height: 160%;
+			top: -40%;
+			background-image: url(../img/startup/bg-net.png);
+			background-repeat: repeat-y;
+			background-size: 100% auto;
+			opacity: 0.8;
+		}
+		&:before {
+			right: 110%;
+		}
+		&:after {
+			transform: rotate(180deg);
+			left: 110%;
+			top: -30%;
 		}
 	}
 }

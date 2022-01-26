@@ -60,6 +60,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		});
 	};
+	// btn--collapser
+	const btnCollapser = document.querySelector(".btn--collapser");
+
+	btnCollapser?.addEventListener("click", function() {
+		const spn = btnCollapser.querySelector("span");
+		const parent = btnCollapser.closest(".accordion__text");
+		parent.classList.toggle("expanded");
+		parent.classList.contains("expanded") ? spn.innerText = "Show less" : spn.innerText = "Show more"
+	})
 
 
 	// copyright - year
