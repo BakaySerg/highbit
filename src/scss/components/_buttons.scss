@@ -35,6 +35,7 @@
 		}
 		@media (max-width: 600px){
 			min-width: 190px;
+			min-height: 52px;
 			background-color: $color-accent;
 			&:hover {
 				background-color: lighten($color-accent,5%);

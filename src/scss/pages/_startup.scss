@@ -37,6 +37,12 @@
 .s-steps {
 	padding-bottom: 8em;
 	z-index: 1;
+	@media (max-width: 1100px){
+		padding-bottom: 5em;
+	}
+	@media (max-width: 600px){
+		padding-bottom: 2.8em;
+	}
 	&:before {
 		content: '';
 		position: absolute;
@@ -54,10 +60,10 @@
 			grid-template-columns: repeat(auto-fill,minmax(290px,1fr));
 			justify-items: stretch;
 			grid-gap: 1.1em;
-			padding-bottom: 4em;
 		}
 		@media (min-width: 992px){
 			grid-gap: 1.75em;
+			padding-bottom: 4em;
 		}
 		@media (max-width: 767px){
 			display: flex;
@@ -72,12 +78,21 @@
 		margin-bottom: 3.2em;
 		position: relative;
 		z-index: 1;
+		@media (max-width: 991px){
+			padding-top: 0.6em;
+			padding-bottom: 0.7em;
+			margin-bottom: 2em;
+		}
 		img {
 			max-width: 121px;
 			max-height: 121px;
 			@media (max-width: 991px){
 				max-width: 110px;
 				max-height: 110px;
+			}
+			@media (max-width: 500px){
+				max-width: 80px;
+				max-height: 90px;
 			}
 		}
 		&:before {
@@ -98,6 +113,13 @@
 		color: #fff;
 		background-color: $bg-dark;
 		padding: 2em 2em 6em;
+		@media (max-width: 991px){
+			padding: 1.2em 2em 3em;
+		}
+		@media (max-width: 767px){
+			flex-grow: 1;
+			max-width: 340px;
+		}
 		.h3 {
 			position: relative;
 			margin-bottom: 1em;
@@ -108,6 +130,13 @@
 				height: 16px;
 				background-color: $color-accent;
 				margin-right: .4em;
+			}
+			@media (max-width: 991px){
+				margin-bottom: 0.7em;
+				&:before {
+					width: 13px;
+					height: 13px;
+				}
 			}
 		}
 		.marked-list {
@@ -135,9 +164,12 @@
 					background-image: url(../img/general/texture-wave-d.png);
 				}
 			}
+			@media (min-width: 768px) and(max-width: 991px){
+				top: 6em;
+			}
 		}
 		&:nth-child(odd) {
-			@media (min-width: 768px){
+			@media (min-width: 992px){
 				top:5em;
 			}
 		}
@@ -154,9 +186,12 @@
 	overflow: hidden;
 	position: relative;
 	z-index: 1;
-	@media (min-width: 1200px){
+	@media (min-width: 1024px){
 		top: -50px;
 		margin-bottom: -50px;
+	}
+	@media (max-width: 400px){
+		padding: 2.4em 1.5em 2em 1.3em;
 	}
 	.marked-list {
 		li {
@@ -177,11 +212,17 @@
 			width: 120%;
 			height: 90px;
 		}
+		@media (max-width: 1100px){
+			margin-bottom: 1.2em;
+		}
 	}
 }
 .s-serv {
 	.container {
 		position: relative;
+	}
+	@media (max-width: 767px){
+		padding-top: 2.8em;
 	}
 }
 .serv {
@@ -224,6 +265,9 @@
 			justify-items: stretch;
 			grid-gap: 7.25em 18.5em;
 		}
+		@media (max-width: 999px){
+			padding-top: 1em;
+		}
 	}
 	&__item {
 		padding: 3.44em 2em 3em 2.3em;
@@ -233,6 +277,9 @@
 			position: absolute;
 			top: 0.7em;
 			right: 1.1em;
+		}
+		@media (max-width: 999px){
+			margin-bottom: -1px;
 		}
 	}
 }
