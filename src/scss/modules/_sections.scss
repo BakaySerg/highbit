@@ -584,14 +584,32 @@
 				}
 			}
 		}
+		&--e {
+			&:before {
+				background-size: auto 100%;
+				background-image: url(../img/training/waves.png);
+				background-position: right bottom;
+				left: -49%;
+				top: 40%;
+				width: 130%;
+				height: 100%;
+			}
+	}
  	}
 	&__text {
 		max-width: 560px;
+		&--grow {
+			max-width: 590px;
+		}
 		p {
 			padding-bottom: 2.6em;
 			@media (max-width: 500px){
 				padding-bottom: 1.8em;
 			}
+		}
+		.h4 {
+			line-height: 1.4;
+			padding-bottom: 1.5em;
 		}
 		.marked-list {
 			li {
