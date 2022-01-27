@@ -1,0 +1,92 @@
+.combo {
+	&__row {
+		@media (min-width: 992px){
+			display: flex;
+			justify-content: space-between;
+			gap: 1.5em;
+		}
+	}
+	&__text {
+		@media (min-width: 992px){
+			max-width: 432px;
+		}
+		p {
+			padding-bottom: 2.2em;
+			@media (max-width: 500px){
+				padding-bottom: 1.8em;
+			}
+		}
+	}
+	&__benefits {
+		position: relative;
+		align-self: flex-start;
+		@media (min-width: 992px){
+			&::before {
+				content: '';
+				position: absolute;
+				width: 105%;
+				height: 60%;
+				left: -12%;
+				bottom: -38%;
+				background-size: contain;
+				background-image: url(../img/general/bricks-dark.png);
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	&__grid {
+		padding-top: 1.3em;
+		padding-bottom: 1em;
+		@media (min-width: 720px){
+			padding-top: 2.9em;
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+		}
+	}
+	&__tile {
+		padding: 1.8em 2em 2.8em;
+		border: 1px solid $border3;
+		@media (min-width: 720px){
+			margin-left: -1px;
+		}
+		@media (max-width: 719px){
+			margin-bottom: -1px;
+		}
+		@media (max-width: 600px){
+			padding: 1.2em 1.6em 2em;
+		}
+	}
+	&__position {
+		display: flex;
+		align-items: center;
+		gap: 1.5em;
+		padding-bottom: .4em;
+		@media (max-width: 500px){
+			gap: 0.9em;
+		}
+	}
+	&__icon {
+		max-width: 121px;
+		max-height: 121px;
+		@media (max-width: 600px){
+			max-width: 106px;
+			max-height: 106px;
+		}
+		@media (max-width: 359px){
+			max-width: 70px;
+			max-height: 70px;
+			margin-left: -0.4em;
+		}
+	}
+}
+.data-double--lg {
+	&:before {
+		margin-bottom: 0.1em;
+		font-size: 2.2em;
+		line-height: 1;
+		letter-spacing: .04em;
+		@media (max-width: 400px){
+			font-size: 1.5em;
+		}
+	}
+}
