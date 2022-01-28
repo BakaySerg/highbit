@@ -187,6 +187,9 @@
 	z-index: 1;
 	@media (min-width: 1024px){
 		max-width: 673px;
+		&--lg {
+			max-width: 842px;
+		}
 		&--lifted {
 			top: -50px;
 			margin-bottom: -50px;

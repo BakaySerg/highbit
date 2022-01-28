@@ -9,6 +9,9 @@
 	&__text {
 		@media (min-width: 992px){
 			max-width: 432px;
+			&--lg {
+				max-width: 560px;
+			}
 		}
 		p {
 			padding-bottom: 2.2em;
@@ -20,6 +23,7 @@
 	&__benefits {
 		position: relative;
 		align-self: flex-start;
+		flex-grow: 0.2;
 		@media (min-width: 992px){
 			&::before {
 				content: '';
@@ -31,6 +35,13 @@
 				background-size: contain;
 				background-image: url(../img/general/bricks-dark.png);
 				background-repeat: no-repeat;
+			}
+			&--b::before {
+				height: 40%;
+				width: 120%;
+				transform: rotate(180deg);
+				left: -107%;
+				bottom: -7%;
 			}
 		}
 	}
