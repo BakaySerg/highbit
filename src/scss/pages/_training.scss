@@ -41,13 +41,46 @@
 			padding-top: 2.9em;
 			display: grid;
 			grid-template-columns: repeat(2,1fr);
+			&--decor {
+				position: relative;
+				z-index: 1;
+				&:before,&:after {
+					content: "";
+					position: absolute;
+					background-size: contain;
+					background-image: url(../img/general/bricks-dark.png);
+					background-repeat: no-repeat;
+					transform-origin: top center;
+					width: 58vmin;
+					height: 18vmin;
+					z-index: -1;
+				}
+				&:before {
+					top: 32%;
+					right: 88%;
+					transform: rotate(-90deg);
+				}
+				&:after {
+					bottom: 1%;
+					left: 88%;
+					transform: rotate(90deg);
+				}
+			}
 		}
 	}
 	&__tile {
 		padding: 1.8em 2em 2.8em;
 		border: 1px solid $border3;
+		&--accent {
+			background-color: $color-accent;
+			[data-double-text]:before {
+				color: #fff;
+				opacity: .4;
+			}
+		}
 		@media (min-width: 720px){
 			margin-left: -1px;
+			margin-bottom: -1px;
 		}
 		@media (max-width: 719px){
 			margin-bottom: -1px;
