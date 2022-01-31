@@ -77,10 +77,27 @@
 					transform: rotate(90deg);
 				}
 			}
+			&--decor-2 {
+				position: relative;
+				z-index: 1;
+				@media (min-width: 1024px){
+					&:before {
+						content: '';
+						position: absolute;
+						width: 84vmin;
+						height: 84vmin;
+						background-size: contain;
+						background-image: url(../img/consulting/waves.png);
+						left: 80%;
+						top: -24%;
+						z-index: -1;
+					}
+				}
+			}
 		}
 	}
 	&__tile {
-		padding: 1.8em 2em 2.8em;
+		padding: 1.8em 1.6em 2.8em 2em;
 		border: 1px solid $border3;
 		&--accent {
 			background-color: $color-accent;
@@ -112,6 +129,7 @@
 	&__icon {
 		max-width: 121px;
 		max-height: 121px;
+		margin-left: -0.4em;
 		@media (max-width: 600px){
 			max-width: 106px;
 			max-height: 106px;
@@ -131,6 +149,180 @@
 		letter-spacing: .04em;
 		@media (max-width: 400px){
 			font-size: 1.5em;
+		}
+	}
+}
+.t__steps {
+	padding-top: 1em;
+	@media (min-width: 1024px){
+		padding-top: 3em;
+		display: grid;
+		grid-template-columns: repeat(auto-fill,minmax(248px,1fr));
+	}
+}
+.t__step {
+	@media (min-width: 1024px){
+		padding: 0 1.4em 0 1.5em;
+		border-left: 1px solid $border4;
+		&:first-child {
+			border-left: none;
+			padding: 0 1.5em 0 0;
+		}
+	}
+	@media (max-width: 1023px){
+		padding-bottom: 1.1em;
+		&:before {
+			margin-bottom: 0.3em;
+		}
+	}
+}
+.s-acc {
+	@media (min-width: 1025px) and (max-width: 1940px) {
+		background-image: url(../img/consulting/lines-horiz.svg);
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding-bottom: 1em;
+	}
+	@media (min-width: 1026px){
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 160px;
+			bottom: 0;
+			left: 0;
+			background-color: $bg-muted;
+		}
+	}
+}
+.acc {
+	position: relative;
+	@media (min-width: 1026px){
+		transform: translateZ(0);
+		display: flex;
+		width: 100%;
+	}
+	&__temp {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		padding: 1.5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		transition: .3s;
+		@media (max-width: 1025px){
+			display: none;
+		}
+	}
+	&__text {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		color: #fff;
+		background-color: $color-accent;
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s;
+		padding: 3.5em 1.8em 1.5em;
+		[data-double-text]:before {
+			color: #fff;
+			opacity: 0.3;
+			font-size: 1.6em;
+			margin-bottom: .6em;
+		}
+		.h3 {
+			padding-bottom: .8em;
+		}
+		p {
+			padding-bottom: 1.2em;
+		}
+		@media (max-width: 1025px){
+			opacity: 1;
+			visibility: visible;
+			position: relative;
+			width: 100%;
+			background-color: transparent;
+			padding: 2em 0.2em 0.8em;
+			.h3>br {display: none;}
+			[data-double-text]:before{
+				color: $color-accent;
+				opacity: .6;
+				font-size: 1.2em;
+			}
+		}
+		@media (max-width: 991px){
+			padding-bottom: 0;
+		}
+	}
+	&__bg {
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		position: relative;
+		background-image: var(--bg1x);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto 101%;
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			background-image: var(--bg2x);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(1,1,1,.5);
+			transition: .3s;
+		}
+		@media (max-width: 1025px){
+			display: none;
+		}
+	}
+	// **********************
+	&:hover {
+		@media (min-width: 1026px){
+			.acc__item {
+				width: 0%;
+				flex: 1 0 0%;
+				.acc__temp {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	&__item {
+		flex: 1 1 25%;
+		height: calc(29.9em + 8.7vw);
+		cursor: pointer;
+		position: relative;
+		background-color: $color-accent;
+		overflow: hidden;
+		transition: .35s ease-out;
+		@media (max-width: 1025px){
+			height: auto;
+			background-color: transparent;
+		}
+		// **********************
+		&:hover {
+			width: 100%;
+			flex: 1 1 100% !important;
+			.acc__bg {
+				max-width: 50%;
+			}
+			.acc__text {
+				opacity: 1;
+				visibility: visible;
+				transition: .3s .35s;
+			}
+			.acc__bg:after {
+				background-color: rgba($color-accent,.6);
+			}
 		}
 	}
 }
