@@ -68,7 +68,25 @@ document.addEventListener('DOMContentLoaded', function(){
 		const parent = btnCollapser.closest(".accordion__text");
 		parent.classList.toggle("expanded");
 		parent.classList.contains("expanded") ? spn.innerText = "Show less" : spn.innerText = "Show more"
-	})
+	});
+
+
+	/**
+		accordions
+	**/
+	const accordionOpen = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-collapse]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					let currentItem = this.closest(".accordion__item");
+					currentItem.classList.toggle("expanded");
+				});
+			}
+		);
+	};
+	accordionOpen();
 
 
 	// copyright - year
