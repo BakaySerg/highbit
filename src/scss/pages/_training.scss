@@ -164,7 +164,7 @@
 				min-width: 50%;
 				max-width: 50%;
 				&:nth-child(n+3):nth-child(odd) {
-					top: -4em;
+					top: -5.4em;
 				}
 				&:nth-child(2) {
 					margin-top: 9.6em;
@@ -190,6 +190,14 @@
 						left: 105%;
 					}
 				}
+			}
+			@media (min-width: 1024px){
+				&:nth-child(n+3):nth-child(odd) {
+					top: -4em;
+				}
+			}
+			@media (max-width: 767px){
+				width: 100%;
 			}
 		}
 	}
