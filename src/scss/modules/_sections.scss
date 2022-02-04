@@ -111,6 +111,11 @@
 				}
 			}
 		}
+		&--ss {
+			&:after {
+				content: none;
+			}
+		}
 		&--a {
 			@media (min-width: 992px){
 				&:after {
@@ -539,9 +544,9 @@
 	&__pict {
 		flex-shrink: 0;
 		align-self: flex-start;
+		position: relative;
+		z-index: 1;
 		@media (min-width: 992px){
-			position: relative;
-			z-index: 1;
 			&:before {
 				content: '';
 				position: absolute;
@@ -825,6 +830,46 @@
 					top: 47%;
 					width: 140%;
 					height: 34%;
+				}
+			}
+		}
+		&--l {
+			@media (min-width: 1024px){
+				&:before {
+					background-size: contain;
+					background-image: url(../img/general/bricks-dark.png);
+					background-position: right bottom;
+					transform: rotate(-90deg);
+					left: -77%;
+					top: 22%;
+					width: 140%;
+					height: 37%;
+				}
+			}
+			@media (max-width: 1100px){
+				&:before {
+					left: -69%;
+				}
+			}
+			.square-decor {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				&:before {
+					bottom: 0;
+					left: 0;
+				}
+				&:after {
+					bottom: 78px;
+					left: 78px;
+					@media (max-width: 1100px){
+						bottom: 60px;
+						left: 60px;
+					}
+					@media (max-width: 991px){
+						bottom: 40px;
+						left: 40px;
+					}
 				}
 			}
 		}
