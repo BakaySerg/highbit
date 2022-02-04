@@ -33,6 +33,9 @@
 	}
 	&__copy {
 		margin-top: auto;
+		@media (min-width: 1024px){
+			margin-bottom: .4em;
+		}
 		@media (max-width: 991px){
 			width: 100%;
 			text-align: center;
