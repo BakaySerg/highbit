@@ -87,6 +87,9 @@
 			padding-top: 1.8em;
 			padding-bottom: 3.2em;
 		}
+		@media (max-width: 500px){
+			padding-bottom: 2.5em;
+		}
 	}
 }
 .s-intro--other {
@@ -157,6 +160,7 @@
 			padding-top: 2.7em;
 		}
 		@media (max-width: 600px){
+			padding-top: 2.1em;
 			&:before {
 				max-width: 60px;
 			}
@@ -174,7 +178,7 @@
 		.color-accent {
 			font-weight: 800;
 		}
-		@media (max-width: 1280px){
+		@media (max-width: 1366px){
 			font-size: 3.6em;
 		}
 		@media (max-width: 991px){
