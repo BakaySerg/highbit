@@ -130,3 +130,13 @@
 		}
 	}
 }
+.text-right {
+	@media (min-width: 1024px){
+		display: flex;
+		justify-content: flex-end;
+		.title {
+			flex-grow: 1;
+			max-width: 562px;
+		}
+	}
+}

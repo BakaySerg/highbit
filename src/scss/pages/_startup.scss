@@ -265,18 +265,21 @@
 		&--lg {
 			max-width: 842px;
 		}
+		&--xl {
+			max-width: 970px;
+		}
 		&--lifted {
 			top: -50px;
 			margin-bottom: -50px;
 		}
+		&--extra-lifted {
+			top: -130px;
+			left: 60px;
+			margin-bottom: -130px;
+		}
 	}
 	@media (max-width: 500px){
 		padding: 2.4em 1.5em 2em 1.3em;
-	}
-	.marked-list {
-		li {
-			margin-bottom: .4em;
-		}
 	}
 	&-title {
 		padding-top: .4em;

@@ -30,8 +30,8 @@ body {
 	padding-right: 15px;
 	width: 100%;
 	max-width: 1150px;
-	&-lg {
-		max-width: 1400px;
+	&--lg {
+		max-width: 1170px;
 	}
 	@media (max-width: 359px) {
 		padding-left: 14px;
