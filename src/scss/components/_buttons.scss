@@ -118,6 +118,14 @@
 		}
 	}
 }
+.s--dark {
+	.btn--combo {
+		.btn--circle {
+			background-color: $bg-middle;
+			color: $color-accent;
+		}
+	}
+}
 .icon {
 	display: inline-block;
 }
