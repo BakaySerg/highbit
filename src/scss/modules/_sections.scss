@@ -837,6 +837,20 @@
 				}
 			}
 		}
+		&--fa {
+			@media (min-width: 1024px){
+				&:before {
+					background-size: auto 100%;
+					background-image: url(../img/consulting/net.png);
+					background-size: contain;
+					left: -32%;
+					top: -6%;
+					width: 170%;
+					height: 130%;
+					transform: rotateX(180deg);
+				}
+			}
+		}
 		&--fd {
 			@media (min-width: 1024px){
 				&:before {
@@ -1052,6 +1066,36 @@
 				}
 			}
 		}
+		&--rr {
+			@media (min-width: 1024px){
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					background-size: contain;
+					background-image: url(../img/general/bricks-dark.png);
+					background-repeat: no-repeat;
+					transform-origin: center;
+					width: 58vmin;
+					height: 18vmin;
+					max-width: 553px;
+					z-index: -1;
+					transform: rotate(-180deg);
+					left: -54%;
+					top: 82%;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					width: 78px;
+					height: 84px;
+					background-size: contain;
+					background-image: url(../img/general/logo.svg);
+					bottom: 24%;
+					left: -13%;
+				}
+			}
+		}
  	}
 	&__text {
 		max-width: 562px;
@@ -1132,6 +1176,9 @@
 				&:before{
 					color: $text;
 				}
+				p {
+					color: #fff;
+				}
 			}
 			&:before {
 				text-align: right;
@@ -1141,7 +1188,7 @@
 			}
 		}
 	}
-	&__grid-4 {
+	&__grid-4,&__grid-5 {
 		@media (min-width: 720px){
 			display: grid;
 			grid-template-columns: repeat(2,1fr);
@@ -1175,11 +1222,24 @@
 				&:before{
 					color: $text;
 				}
+				p {
+					color: #fff;
+				}
 			}
 			&:before {
 				text-align: right;
 				margin-bottom: -1em;
 			}
+			@media (max-width: 991px){
+				padding: 0.9em 1.9em 2.4em;
+			}
+			@media (max-width: 600px){
+				padding: 0.7em 1.6em 1.9em;
+			}
+		}
+	}
+	&__grid-4 {
+		.tech__tile {
 			@media (min-width: 1200px){
 				&:nth-child(2) {
 					top: 3em;
@@ -1188,10 +1248,37 @@
 					top: 6em;
 				}
 			}
-			@media (max-width: 991px){
-				padding: 0.9em 1.9em 2.4em;
+		}
+	}
+	&__grid-5 {
+		padding-top: 1em;
+		@media (min-width: 720px){
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			padding-top: 1.1em;
+		}
+		@media (min-width: 1024px){
+			padding-top: 5em;
+			grid-template-columns: repeat(5,1fr);
+			padding-bottom: 7em;
+			.tech__tile {
+				padding: 1em 1.2em 2em;
+				&:nth-child(2) {
+					top: -3em;
+				}
+				&:nth-child(3) {
+					top: 3em;
+				}
+				&:nth-child(4) {
+					top: 7em;
+				}
 			}
 		}
+	}
+}
+.s--dark .tech__text {
+	b, .font-bold {
+		color: #fff;
 	}
 }
 .s-plat {

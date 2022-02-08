@@ -150,6 +150,9 @@
 				color: #fff;
 				opacity: .4;
 			}
+			p {
+				color: #fff;
+			}
 		}
 		@media (min-width: 720px){
 			margin-left: -1px;
@@ -307,6 +310,57 @@
 		&:before {
 			margin-bottom: 0.3em;
 		}
+	}
+}
+.t__grid {
+	@media (min-width: 1024px){
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		gap: 1em 2.2em;
+		&:before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/general/logo-dark.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: -11%;
+			right: -7%;
+			width: 28vmin;
+			height: 28vmin;
+			max-width: 280px;
+			z-index: -1;
+			opacity: .03;
+		}
+	}
+	@media (max-width: 1200px){
+		&:before {
+			right: 0;
+			top: -8%;
+		}
+	}
+	@media (max-width: 600px){
+		font-size: .936em;
+	}
+}
+.t__item {
+	position: relative;
+	padding-bottom: 1.1em;
+	padding-left: 1.8em;
+	&:before {
+		content: '';
+		width: 1em;
+		height: 1em;
+		position: absolute;
+		left: 0;
+		top: 0.4em;
+	}
+	&--accent::before {
+		background-color: $color-accent;
+	}
+	&--dark::before {
+		background-color: $text;
 	}
 }
 .s-acc {
