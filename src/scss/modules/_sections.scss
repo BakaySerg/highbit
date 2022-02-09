@@ -49,6 +49,60 @@
 			justify-content: space-between;
 			gap: 2em;
 		}
+		@media (max-width: 991px){
+			&--sm {
+				flex-wrap: wrap;
+			}
+		}
+
+	}
+	&__short {
+		@media (min-width: 992px){
+			max-width: 470px;
+			&--sm {
+				max-width: 440px;
+				margin-bottom: 5em;
+			}
+			&--xs {
+				max-width: 320px;
+				position: relative;
+				&:before {
+					position: absolute;
+					content: '';
+					background-size: contain;
+					background-image: url(../img/home/texture-4.png);
+					left: 28%;
+					top: 20%;
+					width: 60vmin;
+					height: 54vmin;
+					max-width: 586px;
+				}
+			}
+		}
+		p {
+			padding-bottom: 2.6em;
+			@media (max-width: 500px){
+				padding-bottom: 1.8em;
+			}
+		}
+	}
+	&__add {
+		position: relative;
+		z-index: 1;
+		@media (min-width: 1200px){
+			left: 70px;
+		}
+		@media (max-width: 1023px){
+			margin-bottom: 1em;
+		}
+		.tech__pict {
+			position: absolute;
+			right: 0;
+			top: 0;
+			@media (max-width: 1023px){
+				display: none;
+			}
+		}
 	}
 	&__pict {
 		flex-shrink: 0;
@@ -254,8 +308,8 @@
 				&:before {
 					background-size: contain;
 					background-image: url(../img/home/texture-4.png);
-					left: 22%;
-					top: 43%;
+					left: 14%;
+					top: 40%;
 					width: 140%;
 					height: 140%;
 				}
@@ -794,6 +848,35 @@
 				}
 			}
 		}
+		&--ff {
+			@media (min-width: 1024px){
+				&:before {
+					background-size: auto 100%;
+					background-image: url(../img/contacts/texture-net.png);
+					background-size: contain;
+					left: -39%;
+					top: -10%;
+					width: 170%;
+					height: 140%;
+					transform: rotate(180deg);
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					width: 78px;
+					height: 84px;
+					background-size: contain;
+					background-image: url(../img/general/logo-dark.svg);
+					bottom: 22%;
+					left: -11%;
+				}
+			}
+			@media (max-width: 1100px){
+				&:before {
+					left: -36%;
+				}
+			}
+		}
 		&--fb {
 			@media (min-width: 1024px){
 				&:before {
@@ -1013,6 +1096,15 @@
 						bottom: 40px;
 						left: 40px;
 					}
+				}
+			}
+		}
+		&--ll {
+			@media (min-width: 1024px){
+				&:before {
+					transform: rotate(0deg);
+					top: 80%;
+					left: 0;
 				}
 			}
 		}
@@ -1246,7 +1338,7 @@
 		.marked-list {
 			li {
 				line-height: 1.2;
-				padding-bottom: 1.5em;
+				padding-bottom: 1.4em;
 				@media (max-width: 500px){
 					padding-bottom: 1.2em;
 				}

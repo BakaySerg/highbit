@@ -169,7 +169,7 @@
 		overflow: hidden;
 		color: #fff;
 		background-color: $bg-dark;
-		padding: 2em 2em 6em;
+		padding: 2em 2em 5em;
 		&--e {
 			@media (min-width: 992px){
 				grid-area: e;
@@ -217,8 +217,14 @@
 			top: .8em;
 			right: 1.1em;
 		}
-		&:nth-child(2) {
+		&--accent {
 			background-color: $color-accent;
+			color: #fff;
+			.step__icon {
+				&:before {
+					background-image: url(../img/general/texture-wave-d.png);
+				}
+			}
 			&:before {
 				color: $bg-dark;
 			}
@@ -227,13 +233,8 @@
 					background-color: $bg-dark;
 				}
 			}
-			.step__icon {
-				&:before {
-					background-image: url(../img/general/texture-wave-d.png);
-				}
-			}
 		}
-		&:not(:nth-child(3n-1)):not(.step__item--e) {
+		&:not(:nth-child(3n-1)):not(.step__item--e):not(.con__add>.step__row>.step__item) {
 			@media (min-width: 992px){
 				top:5em;
 			}
@@ -251,7 +252,7 @@
 	}
 }
 .con__benefits {
-	padding: 2em 2.4em 2.7em;
+	padding: 2em 2.2em 2.6em;
 	color: #fff;
 	background-color: $color-accent;
 	width: 100%;
@@ -277,12 +278,23 @@
 			left: 60px;
 			margin-bottom: -130px;
 		}
+		&--specific {
+			max-width: 480px;
+			top: 174px;
+			left: -210px;
+			@media (max-width: 1200px){
+				left: -50px;
+			}
+		}
+	}
+	@media (max-width: 1024px){
+		padding: 1.9em 2.1em 1.3em;
 	}
 	@media (max-width: 500px){
 		padding: 2.4em 1.5em 2em 1.3em;
 	}
 	&-title {
-		padding-top: .4em;
+		padding-top: .2em;
 		padding-bottom: 1.1em;
 		margin-bottom: 1.7em;
 		position: relative;
@@ -297,6 +309,14 @@
 		}
 		@media (max-width: 1100px){
 			margin-bottom: 1.2em;
+		}
+		@media (max-width: 600px){
+			margin-bottom: 0.6em;
+			padding-top: 0;
+			padding-bottom: 1em;
+			&:before {
+				top: -69%;
+			}
 		}
 	}
 }

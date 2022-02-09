@@ -10,7 +10,7 @@
 		}
 		@media (max-width: 600px){
 			background-size: auto 100%;
-			background-position: -56% center;
+			background-position: -36% center;
 		}
 	}
 	&--home {
@@ -96,6 +96,7 @@
 	.container {
 		@media (min-width: 1200px){
 			min-height: 53vh;
+			padding-left: 0;
 		}
 	}
 	.square-decor {
@@ -125,6 +126,9 @@
 		padding-top: 5em;
 		position: relative;
 		max-width: 640px;
+		&--lg {
+			max-width: 860px;
+		}
 		@media (min-width: 1024px) and (max-width: 1199px) {
 			margin-left: 10px;
 		}
