@@ -81,6 +81,8 @@
 			padding-top: 2.9em;
 			display: grid;
 			grid-template-columns: repeat(2,1fr);
+		}
+		@media (min-width: 1024px){
 			&--decor {
 				position: relative;
 				z-index: 1;
@@ -122,22 +124,22 @@
 					}
 				}
 			}
-			&--decor-2 {
-				position: relative;
-				z-index: 1;
-				@media (min-width: 1024px){
-					&:before {
-						content: '';
-						position: absolute;
-						width: 84vmin;
-						height: 84vmin;
-						max-width: 820px;
-						background-size: contain;
-						background-image: url(../img/consulting/waves.png);
-						left: 80%;
-						top: -24%;
-						z-index: -1;
-					}
+		}
+		&--decor-2 {
+			position: relative;
+			z-index: 1;
+			@media (min-width: 1024px){
+				&:before {
+					content: '';
+					position: absolute;
+					width: 84vmin;
+					height: 84vmin;
+					max-width: 820px;
+					background-size: contain;
+					background-image: url(../img/consulting/waves.png);
+					left: 80%;
+					top: -24%;
+					z-index: -1;
 				}
 			}
 		}
@@ -171,7 +173,7 @@
 		align-items: center;
 		gap: 1.5em;
 		padding-bottom: .4em;
-		@media (max-width: 500px){
+		@media (max-width: 991px){
 			gap: 0.9em;
 		}
 	}
@@ -179,7 +181,7 @@
 		max-width: 121px;
 		max-height: 121px;
 		margin-left: -0.4em;
-		@media (max-width: 600px){
+		@media (max-width: 991px){
 			max-width: 90px;
 			max-height: 90px;
 		}

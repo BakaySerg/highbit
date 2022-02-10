@@ -1,0 +1,96 @@
+.adv {
+	&__grid {
+		@media (min-width: 360px){
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+		}
+		@media (min-width: 768px){
+			padding-top: 1em;
+			display: grid;
+			grid-template-columns: repeat(8,1fr);
+			grid-template-rows: repeat(4,1fr);
+			grid-template-areas: "z a a a a a a v"
+										"b b b c c d d d"
+										"e e e c c f f f"
+										"r i i i k k k m" ;
+		}
+	}
+	&__core {
+		@media (min-width: 768px){
+			grid-area: c;
+			background-image: url(../img/software/texture.png);
+			background-size: cover;
+			display: grid;
+			place-items: center;
+		}
+		@media (max-width: 991px){
+			img {
+				max-width: 60px;
+			}
+		}
+		@media (max-width: 767px){
+			display: none;
+		}
+	}
+	&__item {
+		padding: 1.6em 3.3em;
+		border: 1px solid $border;
+		text-align: center;
+		margin: 0 -1px -1px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.8em;
+		.reach__ill {
+			flex-shrink: 0;
+			padding-bottom: 0 !important;
+		}
+		@media (min-width: 768px){
+			&--1 {
+				grid-area: a;
+			}
+			&--2 {
+				grid-area: b;
+			}
+			&--3 {
+				grid-area: d;
+			}
+			&--4 {
+				grid-area: e;
+			}
+			&--5 {
+				grid-area: f;
+			}
+			&--6 {
+				grid-area: i;
+			}
+			&--7 {
+				grid-area: k;
+			}
+			.h4 {
+				max-width: 208px;
+				line-height: 1.2;
+				&:before {
+					font-size: 2.2em;
+					margin-bottom: 0.2em;
+					line-height: 1;
+				}
+			}
+		}
+		@media (max-width: 991px){
+			.h4 {
+				&:before {
+					font-size: 1.6em;
+				}
+			}
+		}
+		@media (max-width: 767px){
+			padding: 1.4em 1em;
+			flex-direction: column;
+			gap: 0.3em;
+			.h4 {
+				&:before {margin-bottom: 0;}
+			}
+		}
+	}
+}
