@@ -88,6 +88,36 @@ document.addEventListener('DOMContentLoaded', function(){
 	};
 	accordionOpen();
 
+	/**
+		tabs ordinary
+	**/
+	const tabSwitcher = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-trigger-tab]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					let id = this.getAttribute("data-trigger-tab"),
+						comingTab = document.getElementById(id),
+						parent = comingTab.closest('.tabs-content'),
+						currentTab = parent.querySelector('[data-tab="active"]');
+
+					currentTab?.setAttribute("data-tab", "hidden");
+					comingTab.setAttribute("data-tab", "active");
+
+					let tabsBlock = this.closest('.tabs');
+					if (tabsBlock) {
+						let allTabs = tabsBlock.querySelectorAll('[data-trigger-tab]');
+						[...allTabs].forEach(item => {
+							item.classList.remove('active');
+						});
+						this.classList.add('active');
+					};
+				});
+			}
+		);
+	};
+	tabSwitcher();
+
 
 	// copyright - year
 	const year = document.getElementById("year");

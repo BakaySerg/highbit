@@ -1631,6 +1631,11 @@
 		}
 	}
 }
+.h3 + .red__row--alone {
+	@media (min-width: 1024px){
+		padding-top: .5em;
+	}
+}
 .cli {
 	&__row {
 		display: grid;
@@ -1643,6 +1648,15 @@
 		}
 		@media (max-width: 600px){
 			grid-template-columns: repeat(2,1fr);
+		}
+		&--txt {
+			grid-template-columns: repeat(3,1fr);
+			@media (max-width: 991px){
+				grid-template-columns: repeat(2,1fr);
+			}
+			@media (max-width: 719px){
+				display: block;
+			}
 		}
 	}
 	&__item {
@@ -1661,6 +1675,22 @@
 			img {
 				max-width: 122px;
 				max-height: 122px;
+			}
+		}
+	}
+	&__row--txt {
+		.cli__item {
+			display: block;
+			padding: 1.9em 1.1em 2em 2.2em;
+			text-align: left;
+			background-color: $bg-grey;
+			.h3 {
+				@media (min-width: 768px){
+					padding-bottom: 1.4em;
+				}
+			}
+			@media (max-width: 719px){
+				padding: 0.9em 0 0.6em 1em;
 			}
 		}
 	}

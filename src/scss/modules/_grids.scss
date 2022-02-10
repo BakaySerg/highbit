@@ -9,10 +9,10 @@
 			display: grid;
 			grid-template-columns: repeat(8,1fr);
 			grid-template-rows: repeat(4,1fr);
-			grid-template-areas: "z a a a a a a v"
+			grid-template-areas: ". a a a a a a ."
 										"b b b c c d d d"
 										"e e e c c f f f"
-										"r i i i k k k m" ;
+										". i i i k k k ." ;
 		}
 	}
 	&__core {
@@ -53,19 +53,19 @@
 				grid-area: b;
 			}
 			&--3 {
-				grid-area: d;
-			}
-			&--4 {
 				grid-area: e;
 			}
-			&--5 {
-				grid-area: f;
-			}
-			&--6 {
+			&--4 {
 				grid-area: i;
 			}
-			&--7 {
+			&--5 {
 				grid-area: k;
+			}
+			&--6 {
+				grid-area: f;
+			}
+			&--7 {
+				grid-area: d;
 			}
 			.h4 {
 				max-width: 208px;
@@ -93,4 +93,89 @@
 			}
 		}
 	}
+}
+[data-tab]:not([data-tab=active]) {
+   display: none!important;
+}
+.tab {
+	display: flex;
+	align-items: center;
+	padding: .3em 2.3em .3em .6em;
+	min-height: 4.5625em;
+	user-select: none;
+	cursor: pointer;
+	border-top: 1px solid $border;
+	border-bottom: 1px solid $border;
+	margin-bottom: -1px;
+	background-color: transparent;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 100%;
+		bottom: -1px;
+		width: 0;
+      height: 0;
+      border-bottom: 2em solid $color-accent;
+      border-right: 2em solid transparent;
+		opacity: 0;
+	}
+	.h4 {
+		display: flex;
+		align-items: center;
+		gap: .7em;
+		&:before {
+			font-size: 1.4em;
+			margin-bottom: 0;
+		}
+	}
+	&.active {
+		background-color: $color-accent;
+		border-bottom-color: transparent;
+		color: #fff;
+		z-index: 1;
+		&:after {
+			opacity: 1;
+		}
+		.h4 {
+			&:before {
+				color: inherit;
+				opacity: 0.4;
+				transition: .2s;
+			}
+		}
+	}
+}
+.tabs {
+	@media (min-width: 1200px){
+		flex-grow: .2;
+	}
+	&__box {
+		position: relative;
+		z-index: 1;
+		@media (min-width: 720px){
+			display: flex;
+			gap: 6em;
+		}
+		@media (min-width: 1024px){
+			padding-top: 2em;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 86vmin;
+				height: 86vmin;
+				max-width: 830px;
+				background-size: contain;
+				background-image: url(../img/consulting/waves.png);
+				background-repeat: no-repeat;
+				left: -23%;
+				top: -36%;
+				z-index: -1;
+				opacity: 0.8;
+			}
+		}
+	}
+}
+.s--dark .tabs-content {
+	b {color: #fff;}
 }
