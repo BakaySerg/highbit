@@ -20,8 +20,7 @@
 	}
 	&--lg {
 		min-width: 230px;
-		padding-top: .88em;
-		padding-bottom: .88em;
+		padding: .88em;
 		border: 1px solid $color-accent;
 		max-height: 60px;
 		min-height: 60px;
@@ -46,6 +45,16 @@
 			min-width: 180px;
 			padding-top: 0.6em;
 			padding-bottom: 0.6em;
+		}
+		.icon {
+			position: relative;
+			left: -.3em;
+		}
+	}
+	&--dark {
+		background-color: $bg-dark;
+		&:hover {
+			background-color: $bg-middle;
 		}
 	}
 	&--accent {

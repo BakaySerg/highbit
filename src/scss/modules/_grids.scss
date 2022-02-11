@@ -145,6 +145,16 @@
 			}
 		}
 	}
+	@media (max-width: 991px){
+		padding: .6em 1.3em .6em .3em;
+		min-height: 3.6em;
+		.h4 {
+			line-height: 1.2;
+			&:before {
+				font-size: 1.2em;
+			}
+		}
+	}
 }
 .tabs {
 	@media (min-width: 1200px){
@@ -174,6 +184,18 @@
 				opacity: 0.8;
 			}
 		}
+		@media (max-width: 991px){
+			gap: 4em;
+			padding-top: 0.9em;
+		}
+	}
+}
+.tabs-content {
+	@media (max-width: 991px){
+		min-width: 48%;
+	}
+	@media (max-width: 767px){
+		padding-top: 1.3em;
 	}
 }
 .s--dark .tabs-content {
