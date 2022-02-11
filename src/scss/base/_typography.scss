@@ -62,8 +62,8 @@
 		padding-left: 1.1em;
 	}
 	li {
-		padding-bottom: 0.6em;
-		padding-left: .7em;
+		padding-bottom: .6em;
+		padding-left: .6em;
 		@media (max-width: 800px){
 			padding-left: .5em;
 			line-height: 1.6;
@@ -82,13 +82,13 @@
 		&--three {
 			columns: 3;
 			li {
-				margin-bottom: 0.6em;
+				margin-bottom: .6em;
 			}
 		}
 	}
 	li {
 		break-inside: avoid;
-		padding-right: 0.6em;
+		padding-right: .2em;
 	}
 }
 

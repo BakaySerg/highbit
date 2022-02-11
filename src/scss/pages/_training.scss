@@ -380,6 +380,15 @@
 		}
 	}
 }
+.s--dark-lines {
+	@media (min-width: 1025px) and (max-width: 1940px) {
+		background-image: url(../img/software/lines.svg);
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: center 34%;
+		padding-bottom: 1em;
+	}
+}
 .s-acc {
 	@media (min-width: 1025px) and (max-width: 1940px) {
 		background-image: url(../img/consulting/lines-horiz.svg);

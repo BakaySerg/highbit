@@ -5,7 +5,8 @@
 			grid-template-columns: repeat(2,1fr);
 		}
 		@media (min-width: 768px){
-			padding-top: 1em;
+			padding-top: 3em;
+			padding-bottom: 2em;
 			display: grid;
 			grid-template-columns: repeat(8,1fr);
 			grid-template-rows: repeat(4,1fr);
@@ -200,4 +201,116 @@
 }
 .s--dark .tabs-content {
 	b {color: #fff;}
+}
+
+.advant {
+	&__grid {
+		@media (min-width: 360px){
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+		}
+		@media (min-width: 768px){
+			padding-top: 1em;
+			padding-bottom: 4em;
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			grid-template-rows: repeat(5,1fr);
+			grid-template-areas: ". a b ."
+										"d c c f"
+										"e c c g"
+										". l k ."
+										". i . ." ;
+		}
+		@media (max-width: 767px){
+			padding-bottom: 1.6em;
+		}
+	}
+	&__core {
+		position: relative;
+		@media (min-width: 768px){
+			grid-area: c;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		@media (max-width: 767px){
+			grid-column: 1 / -1;
+		}
+		.serv__title--adv {
+			@media (min-width: 768px){
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			@media (max-width: 767px){
+				transform: none;
+				width: auto;
+				height: auto;
+				padding-top: 1em;
+				padding-bottom: 1.2em;
+			}
+			&::after {
+				content: none;
+			}
+		}
+
+	}
+	&__item {
+		padding: 1.6em 3.3em;
+		border: 1px solid $border;
+		text-align: center;
+		margin: 0 -1px -1px 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1em;
+		.reach__ill {
+			flex-shrink: 0;
+			padding-bottom: 0 !important;
+		}
+		.h4 {
+			line-height: 1.3;
+		}
+		@media (min-width: 768px){
+			&--1 {
+				grid-area: a;
+			}
+			&--2 {
+				grid-area: b;
+			}
+			&--3 {
+				grid-area: d;
+			}
+			&--4 {
+				grid-area: f;
+			}
+			&--5 {
+				grid-area: e;
+			}
+			&--6 {
+				grid-area: g;
+			}
+			&--7 {
+				grid-area: l;
+			}
+			&--8 {
+				grid-area: k;
+			}
+			&--9 {
+				grid-area: i;
+				@media (min-width: 768px){
+					position: relative;
+					transform: translateX(50%);
+				}
+			}
+			.h4 {
+				max-width: 208px;
+				line-height: 1.2;
+			}
+		}
+		@media (max-width: 767px){
+			padding: 1.3em 0.8em;
+		}
+	}
 }
