@@ -12,15 +12,6 @@
 		<div class="intro">
 			<canvas id="canvas"></canvas>
 			@@include('./include/header.html')
-			<!-- <div class="subheader">
-				<div class="container">
-					<nav class="subheader__menu">
-						<a href="#relationship">Partner Relationship</a>
-						<a href="#value">Partner Value</a>
-						<a href="#touch">Get in touch</a>
-					</nav>
-				</div>
-			</div> -->
 			<!-- s-intro -->
 			<section class="s-intro s-intro--other">
 				<div class="container square-decor">
@@ -64,17 +55,17 @@
 		<section class="s-form s--gray">
 			<div class="container">
 				<h2 class="title">Get in Touch</h2>
-				<form action="#" class="form">
+				<form class="form" method="post">
 					<div class="text-center">
 						<p><b>Do you have any questions?</b> Leave a request and our manager will contact you shortly!</p>
 					</div>
 					<div class="form__dual">
-						<input type="text" name="c-name" class="form__input" placeholder="Your Name" minlength="2" required>
-						<input type="email" name="c-email" class="form__input" placeholder="Your Email" minlength="2" required>
+						<input type="text" name="name" class="form__input" placeholder="Your Name" minlength="2" required>
+						<input type="email" name="email" class="form__input" placeholder="Your Email" minlength="2" required>
 					</div>
 					<div class="form__dual">
-						<input type="tel" name="c-phone" class="form__input" placeholder="Phone" minlength="8" inputmode="numeric" required>
-						<input type="text" name="c-company" class="form__input" placeholder="Your Company" minlength="2">
+						<input type="tel" name="phone" class="form__input" placeholder="Phone" minlength="6" inputmode="numeric" required>
+						<input type="text" name="company" class="form__input" placeholder="Your Company" minlength="2">
 					</div>
 					<textarea class="textarea" name="msg" cols="30" rows="10" placeholder="Tell use more" required></textarea>
 					<div class="form__cta">
@@ -85,6 +76,7 @@
 						</button>
 					</div>
 				</form>
+				<div class="form__popup" id="form-popup">Do you have any questions?</div>
 			</div>
 		</section>
 
@@ -94,5 +86,57 @@
 	<script src="js/main.js"></script>
 	<script defer src="js/lwg.js"></script>
 	<script defer src="js/waves.js"></script>
+	<script>
+		if (document.forms[0] && window.FormData) {
+				const message = new Object();
+				message.loading = "Loading...";
+				message.success = "Thank you!.. We'll get back to you.";
+				message.failure = "An error has occurred. There is no communication with the server, try again later...";
+
+				const form = document.forms[0];
+				const statusMessage = document.getElementById("form-popup");
+				// statusMessage.className = 'status';
+
+				let request = new XMLHttpRequest();
+				request.open('POST', 'send.php', true);
+				// request.setRequestHeader('accept', 'application/json');
+
+				form.addEventListener('submit', function (event) {
+					event.preventDefault();
+					form.appendChild(statusMessage);
+
+					let formData = new FormData(form);
+
+					// Sending data
+					request.send(formData);
+
+					// statusMessage
+					request.onreadystatechange = function () {
+						// <4 =  waiting response
+						if (request.readyState < 4) {
+							statusMessage.innerHTML = message.loading;
+							statusMessage.classList.add("form__popup--show");
+						}
+						// 4 = response ready
+						else if (request.readyState === 4) {
+							// 200 - 299 = success sending
+							if (request.status == 200 && request.status < 300){
+								statusMessage.innerHTML = message.success;
+								statusMessage.classList.add("form__popup--show","form__popup--success");
+								window.navigator.vibrate(30);
+								setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--success"), 5000);
+								form.reset();
+							}
+							else {
+								statusMessage.classList.add("form__popup--show","form__popup--fail");
+								statusMessage.innerHTML = message.failure;
+								window.navigator.vibrate(30);
+								setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--fail"), 5000);
+							}
+						}
+					}
+				});
+			};
+	</script>
 </body>
 </html>

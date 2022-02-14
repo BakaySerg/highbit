@@ -145,3 +145,43 @@
 		z-index: 1;
 	}
 }
+.form__popup {
+	background-color: $bg-dark;
+	font-size: 1.1em;
+	color: #fff;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 2em 2.1em;
+	line-height: 1.4;
+	max-width: calc(100vw - 28px);
+	z-index: 99;
+	&:not(&--show){
+		display: none;
+	}
+	@media (max-width: 600px){
+		width: 100%;
+		bottom: 14px;
+		right: 14px;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 19px;
+		height: 19px;
+	}
+	&--success {
+		box-shadow: 0 0 14px -2px $bg-grey;
+		&:after {
+			background-color: rgb(1,163,1);
+		}
+	}
+	&--fail {
+		background-color: $color-accent;
+		&:after {
+			background-color: $bg-dark;
+		}
+	}
+}
