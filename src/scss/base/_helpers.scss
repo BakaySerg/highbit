@@ -75,12 +75,12 @@
 }
 .hidden-xs {
 	@media (max-width: 700px){
-		display: none;
+		display: none !important;
 	}
 }
 .hidden-sm {
 	@media (max-width: 1023px){
-		display: none;
+		display: none !important;
 	}
 }
 .text-center {
